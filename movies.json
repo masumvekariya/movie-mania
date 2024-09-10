@@ -13,8 +13,112 @@
             "title": "The Matrix",
             "year": "1999",
             "poster": "https://linktoimage.com/matrix.jpg",
-            "description": "A sci-fi classic directed by the Wachowskis.",
+            "description": "A sci-fi classic that changed the way we see reality.",
             "videoLink": "https://www.youtube.com/embed/vKQi3bBA1y8"
+        },
+        {
+            "id": "3",
+            "title": "Interstellar",
+            "year": "2014",
+            "poster": "https://linktoimage.com/interstellar.jpg",
+            "description": "A sci-fi epic about space exploration and love.",
+            "videoLink": "https://www.youtube.com/embed/zSWdZVtXT7E"
+        },
+        {
+            "id": "4",
+            "title": "Avengers: Endgame",
+            "year": "2019",
+            "poster": "https://linktoimage.com/avengers.jpg",
+            "description": "The epic conclusion to the Marvel Cinematic Universe’s Infinity Saga.",
+            "videoLink": "https://www.youtube.com/embed/TcMBFSGVi1c"
+        },
+        {
+            "id": "5",
+            "title": "The Dark Knight",
+            "year": "2008",
+            "poster": "https://linktoimage.com/darkknight.jpg",
+            "description": "Christopher Nolan's iconic Batman thriller.",
+            "videoLink": "https://www.youtube.com/embed/EXeTwQWrcwY"
+        },
+        {
+            "id": "6",
+            "title": "Pulp Fiction",
+            "year": "1994",
+            "poster": "https://linktoimage.com/pulpfiction.jpg",
+            "description": "A Quentin Tarantino classic that redefined modern cinema.",
+            "videoLink": "https://www.youtube.com/embed/s7EdQ4FqbhY"
+        },
+        {
+            "id": "7",
+            "title": "The Lord of the Rings: The Fellowship of the Ring",
+            "year": "2001",
+            "poster": "https://linktoimage.com/lotr.jpg",
+            "description": "The beginning of the legendary fantasy saga.",
+            "videoLink": "https://www.youtube.com/embed/V75dMMIW2B4"
+        },
+        {
+            "id": "8",
+            "title": "Star Wars: A New Hope",
+            "year": "1977",
+            "poster": "https://linktoimage.com/starwars.jpg",
+            "description": "The start of George Lucas’s space opera.",
+            "videoLink": "https://www.youtube.com/embed/vZ734NWnAHA"
+        },
+        {
+            "id": "9",
+            "title": "Fight Club",
+            "year": "1999",
+            "poster": "https://linktoimage.com/fightclub.jpg",
+            "description": "A cult classic directed by David Fincher.",
+            "videoLink": "https://www.youtube.com/embed/SUXWAEX2jlg"
+        },
+        {
+            "id": "10",
+            "title": "Forrest Gump",
+            "year": "1994",
+            "poster": "https://linktoimage.com/forrestgump.jpg",
+            "description": "The story of a man who lived an extraordinary life.",
+            "videoLink": "https://www.youtube.com/embed/bLvqoHBptjg"
+        },
+        {
+            "id": "11",
+            "title": "The Shawshank Redemption",
+            "year": "1994",
+            "poster": "https://linktoimage.com/shawshank.jpg",
+            "description": "The powerful story of hope and friendship.",
+            "videoLink": "https://www.youtube.com/embed/NmzuHjWmXOc"
+        },
+        {
+            "id": "12",
+            "title": "Gladiator",
+            "year": "2000",
+            "poster": "https://linktoimage.com/gladiator.jpg",
+            "description": "A gripping tale of revenge set in ancient Rome.",
+            "videoLink": "https://www.youtube.com/embed/owK1qxDselE"
+        },
+        {
+            "id": "13",
+            "title": "The Godfather",
+            "year": "1972",
+            "poster": "https://linktoimage.com/godfather.jpg",
+            "description": "The story of the powerful Corleone crime family.",
+            "videoLink": "https://www.youtube.com/embed/sY1S34973zA"
+        },
+        {
+            "id": "14",
+            "title": "Jurassic Park",
+            "year": "1993",
+            "poster": "https://linktoimage.com/jurassicpark.jpg",
+            "description": "A thrilling adventure with dinosaurs brought to life.",
+            "videoLink": "https://www.youtube.com/embed/lc0UehYemQA"
+        },
+        {
+            "id": "15",
+            "title": "Titanic",
+            "year": "1997",
+            "poster": "https://linktoimage.com/titanic.jpg",
+            "description": "The tragic love story aboard the ill-fated ship.",
+            "videoLink": "https://www.youtube.com/embed/CHekzSiZjrY"
         }
     ]
 }

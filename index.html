@@ -10,25 +10,34 @@
     <header>
         <h1>Movie Mania</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
+            <a href="#home">Home</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero">
-        <h2>Discover Your Next Favorite Movie</h2>
+        <h2>Welcome to Movie Mania</h2>
+        <p>Discover and watch your favorite movies.</p>
     </section>
 
-    <!-- Movie List Section -->
-    <section id="movies-list">
-        <!-- Movies will be displayed here -->
-    </section>
+    <section id="movies-list"></section>
+
+    <div id="trailer-container" class="hidden">
+        <iframe id="trailer" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <footer>
-        <p>Movie Mania &copy; 2024</p>
+        <p>&copy; 2024 Movie Mania. All rights reserved.</p>
     </footer>
+    <section id="movies-list"></section>
 
-    <script src="script.js"></script>
+    <div id="trailer-container" class="hidden">
+        <span id="close-trailer" class="close-button">&times;</span>
+        <h3 id="movie-title"></h3> <!-- Movie title will be updated dynamically -->
+        <iframe id="trailer" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <script src="app.js"></script>
 </body>
 </html>
