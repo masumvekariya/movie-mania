@@ -1,0 +1,20 @@
+{
+    "movies": [
+        {
+            "id": "1",
+            "title": "Inception",
+            "year": "2010",
+            "poster": "https://linktoimage.com/inception.jpg",
+            "description": "A mind-bending thriller by Christopher Nolan.",
+            "videoLink": "https://www.youtube.com/embed/YoHD9XEInc0"
+        },
+        {
+            "id": "2",
+            "title": "The Matrix",
+            "year": "1999",
+            "poster": "https://linktoimage.com/matrix.jpg",
+            "description": "A sci-fi classic directed by the Wachowskis.",
+            "videoLink": "https://www.youtube.com/embed/vKQi3bBA1y8"
+        }
+    ]
+}
