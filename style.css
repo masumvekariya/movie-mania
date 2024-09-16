@@ -2,33 +2,43 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #fcf6bd; /* Light background */
+    background-color: #fffcf2; /* Light background */
 }
 
 /* Header */
 header {
-    background-color: #ff99c8; /* Pink for the header */
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #ccc5b9; /* Pink for the header */
+  color: #403d39;
+  padding: 10px 0;
+  text-align: center;
 }
 
 header nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
+  margin: 0 15px;
+  color: #403d39;
+  text-decoration: none;
+  /* Add transition for smooth hover effect */
+  transition: all 0.3s ease;
 }
+
+/* Hover effect on links */
+header nav a:hover {
+  color: #ec1919; /* Change text color on hover */
+  transform: translateY(-2px); /* Slight upward movement */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
 
 /* Hero Section */
 #hero {
-    background-color: #a9def9; /* Light blue for hero section */
+    background-color: #403d39; /* Light blue for hero section */
     padding: 100px 0;
-    color: white;
+    color: #fffcf2;
     text-align: center;
 }
 
 #hero h2 {
-    color: #e4c1f9; /* Soft lavender for text in hero */
+    color: #eb5e28; /* Soft lavender for text in hero */
 }
 
 /* Movie List Section */
@@ -37,11 +47,11 @@ header nav a {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    background-color: #fcf6bd; /* Light yellow background for movie list */
+    background-color: #fffcf2; /* Light yellow background for movie list */
 }
 
 .movie {
-    background-color: #d0f4de; /* Soft green for movie cards */
+    background-color: #ccc5b9; /* Soft green for movie cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     text-align: center;
@@ -59,13 +69,13 @@ header nav a {
 .movie h2 {
     font-size: 20px;
     margin: 10px 0;
-    color: #a9def9; /* Light blue for movie titles */
+    color: #403d39; /* Light blue for movie titles */
 }
 
 /* Footer */
 footer {
-    background-color: #e4c1f9; /* Lavender for footer */
-    color: white;
+    background-color: #eb5e28; /* Lavender for footer */
+    color: #fffcf2;
     padding: 10px 0;
     text-align: center;
 }
@@ -99,27 +109,27 @@ footer {
     top: 20px;
     right: 30px;
     font-size: 40px;
-    color: white;
+    color: #fffcf2;
     cursor: pointer;
 }
 
 #movie-title {
-    color: white;
+    color: #fffcf2;
     font-size: 24px;
     margin-bottom: 20px;
 }
 /* Contact Section */
 #contact {
     padding: 50px 20px;
-    background-color: #a9def9; /* Light blue background */
-    color: #333;
+    background-color: #403d39; /* Light blue background */
+    color: #fffcf2;
     max-width: 600px;
     margin: 0 auto;
     border-radius: 8px;
 }
 
 #contact h2 {
-    color: #ff99c8; /* Pink for headings */
+    color: #ccc5b9; /* Pink for headings */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -132,6 +142,7 @@ footer {
 #contact label {
     margin-bottom: 5px;
     font-weight: bold;
+    color: #fffcf2;
 }
 
 #contact input[type="text"],
@@ -140,29 +151,3 @@ footer {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contact button {
-    background-color: #ff99c8; /* Pink button */
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#contact button:hover {
-    background-color: #e4c1f9; /* Lavender on hover */
-}
-
-#form-response {
-    margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.hidden {
-    display: none;
-}
