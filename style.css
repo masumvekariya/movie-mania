@@ -151,3 +151,9 @@ footer {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
+    resize: vertical; /* Allow vertical resizing */
+    height: 150px; /* Set initial height */
+}
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
