@@ -1,5 +1,5 @@
 const API_KEY = "3fb846f9"; // Your API key
-const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=`;
+const API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&s=`;
 
 // Elements
 const moviesList = document.getElementById("movies-list");
