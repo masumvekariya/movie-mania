@@ -4,30 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Movie Mania</h1>
-        <nav>
-            <a href="index.html">Home</a>
-        </nav>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">🎥 Movie Mania</h1>
+            <a href="index.html" class="text-gray-300 hover:text-white px-4">Back to Home</a>
+        </div>
     </header>
 
-    <!-- Movie Details Section -->
-    <section id="movie-details">
-        <img id="movie-poster" src="" alt="Movie Poster">
-        <h2 id="movie-title"></h2>
-        <p id="movie-year"></p>
-        <p id="movie-description"></p>
-
-        <!-- Video Player Section -->
-        <h3>Watch the Trailer</h3>
-        <iframe id="movie-video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    <section class="p-6">
+        <div id="movie-details" class="container mx-auto bg-gray-800 rounded p-6 shadow-lg">
+            <!-- Movie details will be dynamically added here -->
+        </div>
     </section>
 
-    <footer>
-        <p>Movie Mania &copy; 2024</p>
+    <footer class="bg-gray-800 p-4 text-center">
+        <p>&copy; 2024 Movie Mania. All rights reserved.</p>
     </footer>
 
     <script src="details.js"></script>

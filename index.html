@@ -4,43 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Mania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Movie Mania</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login</a>
-        </nav>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">🎥 Movie Mania</h1>
+            <nav>
+                <a href="index.html" class="px-4 text-gray-300 hover:text-white">Home</a>
+                <a href="about.html" class="px-4 text-gray-300 hover:text-white">About</a>
+                <a href="contact.html" class="px-4 text-gray-300 hover:text-white">Contact</a>
+                <a href="login.html" class="px-4 text-gray-300 hover:text-white">Login</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <h2>Discover Your Next Favorite Movie</h2>
-        <p>Explore our extensive library, watch trailers, and share your thoughts!</p>
+    <section id="hero" class="p-12 bg-gradient-to-r from-purple-700 to-blue-500 text-center">
+        <h2 class="text-4xl font-extrabold mb-4">Discover Your Next Favorite Movie</h2>
+        <p class="text-xl mb-6">Explore our extensive library, watch trailers, and share your thoughts!</p>
+        <button 
+            onclick="fetchMovies()" 
+            class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-6 rounded-lg">
+            Explore Now
+        </button>
     </section>
 
-    <!-- About Section on Homepage -->
-    <section id="home-about">
-        <h2>About Movie Mania</h2>
-        <p>At <strong>Movie Mania</strong>, we are passionate about movies. Our platform allows you to browse a wide range of films, watch trailers, and stay updated with the latest releases. Join our community of movie enthusiasts and immerse yourself in the world of cinema!</p>
-        <a href="about.html" class="button">Learn More</a>
+    <!-- Movies Section -->
+    <section id="movies-list" class="p-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 container mx-auto">
+        <!-- Movie cards will be dynamically injected here -->
     </section>
 
-    <!-- Movie List Section -->
-    <section id="movies-list"></section>
-
-    <!-- Trailer Container -->
-    <div id="trailer-container" class="hidden">
-        <span id="close-trailer" class="close-button">&times;</span>
-        <h3 id="movie-title"></h3>
-        <iframe id="trailer" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <footer>
+    <footer class="bg-gray-800 text-center py-4">
         <p>&copy; 2024 Movie Mania. All rights reserved.</p>
     </footer>
 
