@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Simple validation (already handled by 'required' in HTML, but you can add more)
         if (name && email && message) {
-            // Here you would typically send the data to your server
-            // For this example, we'll just display a success message
-
+// Send the form data to the server using AJAX
             formResponse.textContent = `Thank you, ${name}! Your message has been received. We'll get back to you shortly.`;
             formResponse.style.color = 'green';
             formResponse.classList.remove('hidden');

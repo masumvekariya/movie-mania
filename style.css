@@ -1,159 +1,16 @@
-/* General Styles */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fffcf2; /* Light background */
+    font-family: Arial, sans-serif;
 }
 
-/* Header */
-header {
-  background-color: #ccc5b9; /* Pink for the header */
-  color: #403d39;
-  padding: 10px 0;
-  text-align: center;
+#modal {
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-header nav a {
-  margin: 0 15px;
-  color: #403d39;
-  text-decoration: none;
-  /* Add transition for smooth hover effect */
-  transition: all 0.3s ease;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
-/* Hover effect on links */
-header nav a:hover {
-  color: #ec1919; /* Change text color on hover */
-  transform: translateY(-2px); /* Slight upward movement */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
-}
-
-
-/* Hero Section */
-#hero {
-    background-color: #403d39; /* Light blue for hero section */
-    padding: 100px 0;
-    color: #fffcf2;
-    text-align: center;
-}
-
-#hero h2 {
-    color: #eb5e28; /* Soft lavender for text in hero */
-}
-
-/* Movie List Section */
-#movies-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    background-color: #fffcf2; /* Light yellow background for movie list */
-}
-
-.movie {
-    background-color: #ccc5b9; /* Soft green for movie cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.movie:hover {
-    transform: scale(1.05);
-}
-
-.movie img {
-    width: 100%;
-}
-
-.movie h2 {
-    font-size: 20px;
-    margin: 10px 0;
-    color: #403d39; /* Light blue for movie titles */
-}
-
-/* Footer */
-footer {
-    background-color: #eb5e28; /* Lavender for footer */
-    color: #fffcf2;
-    padding: 10px 0;
-    text-align: center;
-}
-
-#trailer-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 999;
-    transition: opacity 0.3s;
-}
-
-#trailer-container.hidden {
-    display: none;
-}
-
-#trailer {
-    max-width: 90%;
-    max-height: 80%;
-}
-
-#close-trailer {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: #fffcf2;
-    cursor: pointer;
-}
-
-#movie-title {
-    color: #fffcf2;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-/* Contact Section */
-#contact {
-    padding: 50px 20px;
-    background-color: #403d39; /* Light blue background */
-    color: #fffcf2;
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-
-#contact h2 {
-    color: #ccc5b9; /* Pink for headings */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-}
-
-#contact label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #fffcf2;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    resize: vertical; /* Allow vertical resizing */
-    height: 150px; /* Set initial height */
-}
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;

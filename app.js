@@ -1,52 +1,58 @@
-// Wait for the DOM to fully load before running the script
-document.addEventListener('DOMContentLoaded', function () {
-    // Fetch the movie data from movies.json
-    fetch('movies.json')
-        .then(response => response.json())  // Parse the JSON data
-        .then(data => {
-            const moviesList = document.getElementById('movies-list');  // Get the movie list section
-            data.movies.forEach(movie => {
-                // Create a new div for each movie
-                const movieCard = document.createElement('div');
-                movieCard.className = 'movie';  // Assign a CSS class to each movie card
+const API_KEY = "3fb846f9"; // Your API key
+const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=`;
 
-                // Create movie card content with poster, title, year, description, and button
-                movieCard.innerHTML = `
-                    <img src="${movie.poster}" alt="${movie.title}">
-                    <h2>${movie.title} (${movie.year})</h2>
-                    <p>${movie.description}</p>
-                    <button onclick="playTrailer('${movie.videoLink}', '${movie.title}')">Watch Trailer</button>
-                `;
+// Elements
+const moviesList = document.getElementById("movies-list");
 
-                // Append each movie card to the movie list section
-                moviesList.appendChild(movieCard);
-            });
-        });
-});
+// Fetch movies by title
+async function fetchMovies(searchTerm = "avengers") {
+    try {
+        // Display loading message
+        moviesList.innerHTML = `<p class="text-center text-gray-300">Loading movies...</p>`;
 
-// Function to play the movie trailer
-function playTrailer(videoLink, movieTitle) {
-    const trailerContainer = document.getElementById('trailer-container');
-    const trailer = document.getElementById('trailer');
-    const movieTitleElement = document.getElementById('movie-title');
+        const response = await fetch(`${API_URL}${searchTerm}`);
+        const data = await response.json();
 
-    // Set the video source to the provided link and update the title
-    trailer.src = videoLink;
-    movieTitleElement.textContent = movieTitle;
-
-    // Make the trailer container visible
-    trailerContainer.classList.remove('hidden');
+        if (data.Response === "True") {
+            displayMovies(data.Search);
+        } else {
+            moviesList.innerHTML = `<p class="text-center text-red-500">${data.Error}</p>`;
+        }
+    } catch (error) {
+        console.error("Error fetching movies:", error);
+        moviesList.innerHTML = `<p class="text-center text-red-500">Failed to load movies. Try again later.</p>`;
+    }
 }
 
-// Function to close the trailer when done
-function closeTrailer() {
-    const trailerContainer = document.getElementById('trailer-container');
-    const trailer = document.getElementById('trailer');
-
-    // Stop the trailer and hide the container
-    trailer.src = '';  // Clear the src to stop the video
-    trailerContainer.classList.add('hidden');
+// Display movies on the homepage
+function displayMovies(movies) {
+    moviesList.innerHTML = movies
+        .map((movie) => createMovieCard(movie))
+        .join("");
 }
 
-// Adding the close functionality for the trailer player
-document.getElementById('close-trailer').addEventListener('click', closeTrailer);
+// Create individual movie cards
+function createMovieCard(movie) {
+    return `
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform">
+            <img src="${movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"}" alt="${movie.Title}" class="w-full h-64 object-cover">
+            <div class="p-4">
+                <h3 class="text-lg font-bold">${movie.Title}</h3>
+                <p class="text-gray-400 text-sm">Year: ${movie.Year}</p>
+                <button 
+                    onclick="redirectToDetailsPage('${movie.imdbID}')"
+                    class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg w-full">
+                    View Details
+                </button>
+            </div>
+        </div>
+    `;
+}
+
+// Redirect to the details page
+function redirectToDetailsPage(imdbID) {
+    window.location.href = `movie-details.html?id=${imdbID}`;
+}
+
+// Fetch movies when the page loads
+document.addEventListener("DOMContentLoaded", () => fetchMovies());
