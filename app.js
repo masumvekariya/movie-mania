@@ -1,8 +1,9 @@
-const API_KEY = "3fb846f9"; // Your API key
-const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=`;
+const API_KEY = "3fb846f9"; 
+const API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&s=`;
 
 // Elements
 const moviesList = document.getElementById("movies-list");
+const searchInput = document.getElementById("search-input");
 
 // Fetch movies by title
 async function fetchMovies(searchTerm = "avengers") {
@@ -56,3 +57,13 @@ function redirectToDetailsPage(imdbID) {
 
 // Fetch movies when the page loads
 document.addEventListener("DOMContentLoaded", () => fetchMovies());
+
+// Handle the search when user clicks the search button
+function searchMovies() {
+    const query = searchInput.value.trim();
+    if (query) {
+        fetchMovies(query);
+    } else {
+        moviesList.innerHTML = `<p class="text-center text-red-500">Please enter a movie or series name to search.</p>`;
+    }
+}

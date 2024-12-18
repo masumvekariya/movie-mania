@@ -24,11 +24,14 @@
     <section id="hero" class="p-12 bg-gradient-to-r from-purple-700 to-blue-500 text-center">
         <h2 class="text-4xl font-extrabold mb-4">Discover Your Next Favorite Movie</h2>
         <p class="text-xl mb-6">Explore our extensive library, watch trailers, and share your thoughts!</p>
-        <button 
-            onclick="fetchMovies()" 
-            class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-6 rounded-lg">
-            Explore Now
-        </button>
+        
+        <!-- Search bar -->
+        <div class="mb-6">
+            <input type="text" id="search-input" class="p-2 w-1/2 rounded-lg text-gray-900" placeholder="Search for a movie or series..." />
+            <button onclick="searchMovies()" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-6 rounded-lg">
+                Search
+            </button>
+        </div>
     </section>
 
     <!-- Movies Section -->
